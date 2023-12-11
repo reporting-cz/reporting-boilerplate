@@ -25,7 +25,7 @@ export class App extends LitElement {
 		<bp-header text="Hello World"></bp-header>
 		<div>
 			<div>
-				<button @click="${this._onClick}">Load data</button>
+				<button @click="${this._onClick}" ?disabled="${this.loading}">Load data</button>
 			</div>
 			<div>
 				${this.loading ? html`loading...` : ''}
