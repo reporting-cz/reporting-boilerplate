@@ -1,0 +1,37 @@
+version: "3.9"
+services:
+  bp-frontend:
+    build: ./packages/frontend
+    environment:
+      - DOCKER_RUNNING=true
+    command: /bin/sh -c /home/rp-boilerplate/packages/frontend/start.sh
+    ports:
+      - 3000:3000
+   
+    volumes:
+      - ./:/home/rp-boilerplate
+  
+  bp-backend:
+    build: ./packages/backend
+    environment:
+      - DOCKER_RUNNING=true
+    command: /bin/sh -c /home/rp-boilerplate/packages/backend/start.sh
+    ports:
+      - 3001:3001
+    extra_hosts:
+      host.docker.internal: host-gateway
+
+    volumes:
+      - ./:/home/rp-boilerplate
+  
+  bp-database:
+    build: ./packages/database
+    ports:
+      - 1433:1433
+
+    environment:
+      MSSQL_SA_PASSWORD: "sysadmin@1"
+      ACCEPT_EULA: "Y"
+      
+    volumes:
+      - ./packages/database:/home/bp-database

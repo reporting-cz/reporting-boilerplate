@@ -1,0 +1,22 @@
+{
+	"name": "@reporting/boilerplate",
+	"scripts": {
+		"lint": "yarn workspaces foreach run lint",
+		"test": "yarn workspaces foreach run test",
+		"composer-install": "./vendor/bin/monorepo-builder merge && composer install",
+		"composer-update": "./vendor/bin/monorepo-builder merge && composer update",
+		"composer-autoload": "./vendor/bin/monorepo-builder merge && composer dump-autoload",
+		"clean": "rimraf packages/**/dist & rimraf packages/**/*.tsbuildinfo",
+		"build": "yarn workspaces foreach -pvit run build",
+		"dev": "docker compose up bp-database & yarn workspace @reporting/bp-backend dev & yarn workspace @reporting/bp-frontend dev",
+		"dev:docker": "docker compose up"
+	},
+	"workspaces": [
+		"packages/*"
+	],
+	"devDependencies": {
+		"rimraf": "^3.0.2",
+		"typescript": "4.9.3"
+	},
+	"packageManager": "yarn@4.0.2"
+}

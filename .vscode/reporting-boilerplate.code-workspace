@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{"path": "..", "name": "reporting-boilerplate"},
+		{"path": "../packages/database"},
+		{"path": "../packages/frontend"},
+		{"path": "../packages/backend"}
+	],
+	"settings": {
+		"typescript.tsdk": "reporting-boilerplate\\.yarn\\sdks\\typescript\\lib",
+		"typescript.enablePromptUseWorkspaceTsdk": true,
+		"files.eol": "\n",
+		"npm.packageManager": "yarn",
+		"terminal.integrated.cwd": "${workspaceFolder:reporting-boilerplate}"
+	}
+}

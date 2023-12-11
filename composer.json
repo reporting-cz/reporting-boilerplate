@@ -1,0 +1,30 @@
+{
+    "name": "reporting/boilerplate",
+    "description": "Minimal project boilerplate",
+    "type": "project",
+    "require": {
+        "dibi/dibi": "^5.0.0",
+        "nette/utils": "^4.0.2",
+        "slim/psr7": "^1.6.1",
+        "slim/slim": "^4.12",
+        "symplify/monorepo-builder": "^11.2",
+        "tracy/tracy": "^2.10"
+    },
+    "require-dev": {
+        "nette/tester": "^2.5.1"
+    },
+    "autoload": {
+        "classmap": [
+            "packages/backend/src"
+        ]
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "*"
+        }
+    ],
+    "replace": {
+        "reporting/bp-backend": "self.version"
+    }
+}

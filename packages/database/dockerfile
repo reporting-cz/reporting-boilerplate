@@ -1,0 +1,12 @@
+# syntax=docker/dockerfile:1
+
+FROM mcr.microsoft.com/mssql/server:2022-latest
+
+WORKDIR /home/bp-database
+COPY . /home/bp-database
+EXPOSE 1433:1433
+
+ENV ACCEPT_EULA=Y
+ENV MSSQL_SA_PASSWORD=sysadmin@1
+
+CMD /home/bp-database/init.sh & /opt/mssql/bin/sqlservr

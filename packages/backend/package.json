@@ -1,0 +1,10 @@
+{
+	"name": "@reporting/bp-backend",
+	"version": "0.0.1",
+	"license": "UNLICENSED",
+	"scripts": {
+		"dev": "php -S localhost:3001 -t ./",
+		"test": "../../vendor/bin/tester -C .",
+		"_dev": "yarn dlx env-cmd -x php -S localhost:3001 -t ./packages/backend"
+	}
+}

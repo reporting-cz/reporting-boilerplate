@@ -1,0 +1,60 @@
+{
+	"version": "0.2.0",
+	"configurations": [{
+		"name": "PHP: Listen for XDebug",
+		"type": "php",
+		"request": "launch",
+		"port": 9003
+	}, {
+		"name": "PHP (docker): Listen for XDebug",
+		"type": "php",
+		"request": "launch",
+		"port": 9003,
+		"pathMappings": {
+			"/home/rp-boilerplate": "${workspaceFolder}"
+		}
+	}, {
+		"type": "php",
+		"name": "PHP: Launch current file",
+		"request": "launch",
+		"program": "${file}",
+		"cwd": "${fileDirname}",
+		"env": {"XDEBUG_TRIGGER": "1"},
+		"runtimeArgs": [
+			"-C"
+		],
+		"port": 9003
+	}, {
+		"type": "php",
+		"name": "PHP: Test current file",
+		"request": "launch",
+		"program": "${workspaceFolder}/vendor/bin/tester",
+		"env": {"XDEBUG_TRIGGER": "1"},
+		"runtimeArgs": [
+			"-C", "${file}"
+		],
+		"port": 9003
+	}, {
+		"type": "PowerShell",
+		"request": "launch",
+		"name": "PowerShell: Launch Current File",
+		"script": "${file}",
+		"args": [],
+		"cwd": "${file}"
+	}, {
+		"type": "PowerShell",
+		"request": "launch",
+		"name": "PowerShell: Launch Current File w/Args Prompt",
+		"script": "${file}",
+		"args": [
+			"${command:SpecifyScriptArgs}"
+		],
+		"cwd": "${file}"
+	}, {
+		"type": "node",
+		"name": "Node: Launch Program",
+		"request": "launch",
+		"runtimeArgs": ["-r", "${workspaceFolder}/.pnp.cjs"],
+		"program": "${file}"
+	}]
+}

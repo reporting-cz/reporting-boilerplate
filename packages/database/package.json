@@ -1,0 +1,14 @@
+{
+	"name": "@reporting/bp-database",
+	"version": "0.0.1",
+	"license": "UNLICENSED",
+	"private": true,
+	"scripts": {
+		"build": "docker build --tag bp-database .",
+		"create": "docker container create --name bp-database --volume .:/home/bp-database -p 1433:1433 bp-database",
+		"dev": "docker start --attach bp-database",
+		"prod": "",
+		"lint": "",
+		"test": ""
+	}
+}
