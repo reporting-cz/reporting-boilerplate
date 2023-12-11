@@ -44,7 +44,9 @@ export default (env, args) => ({
 		client: {overlay: false},
 		proxy: {
 			'/api': {
-				target: 'http://bp-backend:3001',
+				target: process.env.DOCKER_RUNNING == 'true'
+					? 'http://bp-backend:3001'
+					: 'http://localhost:3001',
 				pathRewrite: { '^/api': '' }
 			},
 		},

@@ -1,5 +1,9 @@
 {
   "recommendations": [
-    "arcanis.vscode-zipfs"
+    "arcanis.vscode-zipfs",
+    "runem.lit-plugin",
+    "editorconfig.editorconfig",
+    "xdebug.php-debug",
+    "bmewburn.vscode-intelephense-client"
   ]
 }
