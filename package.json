@@ -8,8 +8,9 @@
 		"composer-autoload": "./vendor/bin/monorepo-builder merge && composer dump-autoload",
 		"clean": "rimraf packages/**/dist & rimraf packages/**/*.tsbuildinfo",
 		"build": "yarn workspaces foreach -pvit run build",
-		"dev": "docker compose up bp-database & yarn workspace @reporting/bp-backend dev & yarn workspace @reporting/bp-frontend dev",
-		"dev:docker": "docker compose up"
+		"dev:app": "yarn workspace @reporting/bp-backend dev & yarn workspace @reporting/bp-frontend dev",
+		"dev:docker": "docker compose up",
+		"dev": "docker compose up bp-database & yarn dev:app"
 	},
 	"workspaces": [
 		"packages/*"
