@@ -12,8 +12,6 @@ pro lokální vývoj (ne v dockeru) navíc:
 		- windows: [link](https://learn.microsoft.com/en-us/sql/connect/php/download-drivers-php-sql-server?view=sql-server-ver16#download) (php_sqlsrv_82_nts_x64.dll)
 		- linux: https://pecl.php.net/package/sqlsrv
 
-> Databázová část projektu (packages/database) běží v dockeru vždy
-
 # Instalace a spuštění
 
 ## V dockeru
@@ -38,6 +36,8 @@ yarn dev
 # yarn dev:app
 ```
 
+> [!NOTE]
+> Databázová část projektu (packages/database) běží v dockeru vždy.
 
 # Nastaveí IDE
 
