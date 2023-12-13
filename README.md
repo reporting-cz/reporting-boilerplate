@@ -44,6 +44,7 @@ yarn dev
 Kvůli technologii Yarn PnP (https://yarnpkg.com/features/pnp), která ja tady použitá je potřeba určité specifické nastavení editoru, aby během psaní typescript kódu správně fungovala typová kontrola, intellisense apod.
 
 ## vscode
+### Typescript
 - přidat rozšíření *arcanis.vscode-zipfs* (https://marketplace.visualstudio.com/items?itemName=arcanis.vscode-zipfs)
 - otevřít libovolný .ts soubor v projektu
 	- F1 -> "Select TypeScript Version" -> "Use Workspace Version"
@@ -54,3 +55,7 @@ Kvůli technologii Yarn PnP (https://yarnpkg.com/features/pnp), která ja tady p
 
 
 - více tady https://yarnpkg.com/getting-started/editor-sdks#vscode
+
+
+### PHP
+- pro vývoj v PHP ve vscode se hodí https://marketplace.visualstudio.com/items?itemName=xdebug.php-pack
