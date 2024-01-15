@@ -14,7 +14,7 @@ export default (env, args) => ({
 		'app': {import: './src/index.ts', filename: 'bundle.js'},
 	},
 	mode: args.mode,
-	devtool: args.mode == 'development' ? 'eval-source-map' : null,
+	devtool: args.mode == 'development' ? 'eval-source-map' : false,
 	output: {
 		path: path.resolve(__dirname, 'dist'),
 	},
