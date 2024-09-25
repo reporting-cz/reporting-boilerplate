@@ -39,7 +39,7 @@ yarn dev
 > [!NOTE]
 > Databázová část projektu (packages/database) běží v dockeru vždy.
 
-# Nastaveí IDE
+# Nastavení IDE
 
 Kvůli technologii Yarn PnP (https://yarnpkg.com/features/pnp), která ja tady použitá je potřeba určité specifické nastavení editoru, aby během psaní typescript kódu správně fungovala typová kontrola, intellisense apod.
 
